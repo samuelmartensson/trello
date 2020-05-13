@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+i {
+  pointer-events: none;
+}
+
+@mixin btn-default($color, $hover-color) {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: white;
+  background: $color;
+  cursor: pointer;
+  &:hover {
+    background: $hover-color;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 5px;
+  outline: 1px solid slategrey;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import 'header';
+@import 'footer';
+@import 'board';
+@import 'home';
+@import 'new';
+@import 'view';
+@import 'modal';

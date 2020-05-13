@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  display: flex;
+  background: rgb(0, 199, 156);
+  a {
+    @include btn-default(rgb(255, 255, 255), rgb(238, 235, 235));
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    color: black;
+  }
+  .float-right {
+    margin-left: auto;
+  }
+}

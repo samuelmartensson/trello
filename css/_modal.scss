@@ -1,0 +1,33 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.336);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrap {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    width: 45%;
+    min-width: 400px;
+  }
+  &__title {
+    margin: 1rem 0;
+  }
+  &__desc {
+    width: 100%;
+    min-height: 250px;
+    border: 1px solid lightgray;
+    cursor: auto;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
