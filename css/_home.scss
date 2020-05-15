@@ -29,7 +29,7 @@
     margin-top: 1rem;
     text-align: center;
   }
-  i {
+  .icon {
     font-size: 12vw;
     color: black;
     transition-duration: 400ms;
@@ -40,7 +40,7 @@
     cursor: pointer;
     transition: 400ms ease;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     &:hover i {
       color: #77dd77;

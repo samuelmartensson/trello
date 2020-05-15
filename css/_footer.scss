@@ -3,8 +3,27 @@
   background: rgb(32, 30, 30);
   color: white;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 5rem;
   text-align: center;
   margin-top: auto;
+  z-index: 99999;
+
+  &__socials-wrap {
+    display: flex;
+    margin-top: 2rem;
+    width: 30%;
+    justify-content: space-evenly;
+  }
+  &__social-icon {
+    transition-duration: 100ms;
+    cursor: pointer;
+    font-size: 3rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

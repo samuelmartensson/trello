@@ -2,5 +2,10 @@
     <a href="index.php">Home</a>
     <a href="boardView.php">Boards</a>
     <a href="boardCreate.php">Create new</a>
-    <button class="float-right">Options</button>
+    <?php 
+    if (strpos($_SERVER['REQUEST_URI'], 'board.php')){
+        echo '<button onclick="changeBg()" class="float-right"><img src="cog-solid.svg"/></button>';
+    }
+    
+    ?>
 </header>

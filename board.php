@@ -22,7 +22,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title><?= $name ?></title>
+    <title>Board - <?= $name ?></title>
 </head>
 <body class="board">
     <?php require_once 'header.php'?>
@@ -30,8 +30,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <h1 class="board__title">Working on: <input class="board__title-input" type="text" value="<?= $name ?>"></h1>
     <div class="board__input-wrap">
         <span class="board__input-wrap-title">Create new category</span>
-        <input id="input-value" type="text" />
-        <button onclick="createNewCategory()">Create</button>
+        <input class="task-input" onkeydown="createNewCategory(event)" id="input-value" type="text" />
+        <button class="board__cat-add" onclick="createNewCategory(event)">Create</button>
         <input id="board-id" type="hidden" value="<?= $id ?>" />
     </div>
 
@@ -45,5 +45,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <script src="./js/CRUD.js"></script>
     <script src="./js/renderBoard.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/background.js"></script>
 </body>
 </html>

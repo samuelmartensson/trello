@@ -1,4 +1,5 @@
-.modal {
+.modal,
+.bg-modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -12,22 +13,77 @@
   &__wrap {
     background: white;
     padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    width: 45%;
-    min-width: 400px;
+    border-radius: 2px;
+    width: 768px;
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
   }
   &__title {
     margin: 1rem 0;
+    font-size: 1.5rem;
+    border: none;
+    transition-duration: 80ms;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    &:focus {
+      border-bottom: 2px solid rgb(20, 20, 20);
+      padding-left: 0.25rem;
+    }
   }
   &__desc {
     width: 100%;
     min-height: 250px;
-    border: 1px solid lightgray;
+    border: none;
+    padding: 0.5rem 0 0 0.5rem;
+    background: rgb(235, 235, 235);
+    border-left: 2px solid rgb(20, 20, 20);
     cursor: auto;
+    font-size: 0.8rem;
+    outline: none;
+  }
+  &__desc-title {
+    margin: 1rem 0;
+    font-weight: bold;
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+  ::placeholder {
+    padding: 0;
   }
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__close {
+    @include btn-default(gray, black);
+  }
+  &__bg-inputs {
+    display: flex;
+    border: 1px solid black;
+  }
+  &__bg-input {
+    flex: 1;
+    border: none;
+    padding: 0.5rem;
+  }
+  &__bg-close {
+    background: none;
+    border: none;
+    border-left: 1px solid black;
+    padding: 0 1rem;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}
+.bg-modal {
+  .modal-wrap {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -10,5 +10,15 @@
   }
   .float-right {
     margin-left: auto;
+    border: none;
+    padding: 0 1rem;
+    background: #00c79c;
+    cursor: pointer;
+    &:hover {
+      background: white;
+    }
+    img {
+      width: 20px;
+    }
   }
 }
