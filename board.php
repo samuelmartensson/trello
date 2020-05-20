@@ -4,14 +4,21 @@ require 'db.php';
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM boards WHERE id = :id";
-$stmt = $db->prepare($sql);
+try {
 
-$stmt->execute([':id' => $id]);
-
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    $name = $row['name'];
+    $sql = "SELECT * FROM boards WHERE id = :id";
+    $stmt = $db->prepare($sql);
+    
+    $stmt->execute([':id' => $id]);
+    
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $name = $row['name'];
+    }
 }
+catch(PDOException $e) {
+    echo $e->getMessage();
+}
+
 
 ?>
 
