@@ -15,6 +15,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $data = $row['cate_task'];
 }
 
+
 $dataObj = json_decode($data, true);
 $json = json_encode($dataObj, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
 echo $json;

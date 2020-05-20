@@ -14,6 +14,9 @@ try {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $name = $row['name'];
     }
+    if (empty($name)) {
+        header('Location: 404.php');
+    }
 }
 catch(PDOException $e) {
     echo $e->getMessage();
